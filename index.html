@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="InnovaBank - O banco digital feito para freelancers, PJ e nômades digitais.">
+    
+    <title>InnovaBank | O Futuro Financeiro</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo-dark.png" alt="InnovaBank Logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#features">Funcionalidades</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="signup.html" class="btn-primary">Abrir Conta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero"> 
+        <div class="hero-bg-glow"></div> 
+
+        <div class="hero-content">
+            <h1>Sua liberdade financeira, sem burocracia.</h1>
+            <p class="hero-subtitle">
+                O único banco digital feito para freelancers, PJ e nômades digitais. 
+                Emita notas fiscais em segundos.
+            </p>
+            <a href="signup.html" class="btn-primary">Abrir Conta</a>
+        </div>
+
+        <div class="hero-img">
+            <img src="assets/app-ib.png" alt="App InnovaBank na tela do celular">
+        </div>
+    </section>
+    
+    <div class="tech-marquee">
+        <div class="marquee-content">
+            <span>ZERO ANUIDADE</span> <span class="dot">•</span>
+            <span>CÂMBIO INSTANTÂNEO</span> <span class="dot">•</span>
+            <span>CARTÃO METAL</span> <span class="dot">•</span>
+            <span>CONTA GLOBAL</span> <span class="dot">•</span>
+            <span>CRYPTO FRIENDLY</span> <span class="dot">•</span>
+            <span>ZERO ANUIDADE</span> <span class="dot">•</span>
+            <span>CÂMBIO INSTANTÂNEO</span> <span class="dot">•</span>
+            <span>CARTÃO METAL</span> <span class="dot">•</span>
+            <span>CONTA GLOBAL</span> <span class="dot">•</span>
+            <span>CRYPTO FRIENDLY</span> <span class="dot">•</span>
+        </div>
+    </div>
+
+    <section class="simulator-section">
+        <div class="simulator-container">
+            
+            <div class="simulator-text">
+                <h2>Pare de perder dinheiro.<br><span class="text-highlight">Calcule sua economia.</span></h2>
+                <p>Veja quanto você deixa de ganhar usando bancos tradicionais para receber do exterior.</p>
+            </div>
+
+            <div class="calculator-card glass-effect">
+                <div class="input-group">
+                    <label for="amountInput">Quanto você vai receber?</label>
+                    <div class="input-wrapper">
+                        <span class="currency-symbol">USD $</span>
+                        <input type="number" id="amountInput" value="1000" placeholder="1000">
+                    </div>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-row bank-row">
+                        <span>Banco Tradicional</span>
+                        <strong id="bankResult">R$ 4.750,00</strong>
+                    </div>
+
+                    <div class="result-row innova-row">
+                        <span>InnovaBank 🚀</span>
+                        <strong id="innovaResult">R$ 4.955,00</strong>
+                    </div>
+                </div>
+
+                <div class="savings-alert">
+                    Você economiza <span id="savingsResult">R$ 205,00</span>
+                </div>
+                
+                <p class="disclaimer">*Cotação simulada do dia: USD 1 = BRL 5.00</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="features-container">
+            <h2>Inovação em <span>cada detalhe</span></h2> 
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="ph ph-receipt card-icon"></i> 
+                    <h3>Emissor Inteligente</h3>
+                    <p>Diga adeus à prefeitura. Gere NFs em 3 cliques e envie automaticamente.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="ph ph-shield-check card-icon"></i>
+                    <h3>Simples & DARF</h3>
+                    <p>Cálculo de impostos em tempo real. Separe o dinheiro do Leão sem surpresas.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="ph ph-globe-hemisphere-west card-icon"></i>
+                    <h3>Recebimento Global</h3>
+                    <p>Receba em Dólar/Euro com a menor taxa do mercado e conversão instantânea.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ecosystem-section">
+        <div class="container">
+            <div class="ecosystem-text">
+                <h2>Mais que um banco.<br><span class="glitch-text">Um Lifestyle.</span></h2>
+                <p>Cartão Black em metal, app com dark mode nativo e integração total com sua vida nômade.</p>
+                
+                <ul class="tech-list">
+                    <li><i class="ph ph-check-circle"></i> Cartão Black Metal</li>
+                    <li><i class="ph ph-check-circle"></i> NFC & Apple Pay</li>
+                    <li><i class="ph ph-check-circle"></i> Suporte Premium 24/7</li>
+                </ul>
+            </div>
+
+            <div class="ecosystem-visuals">
+                <div class="card-spotlight"></div>
+                <div class="card-floater">
+                    <img src="assets/cards-mockup.png" alt="Cartão Black Innova" class="hero-card">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Pronto para o <span class="text-highlight">futuro?</span></h2>
+            <p>Junte-se a milhares de nômades e devs que já dominam suas finanças.</p>
+            <a href="signup.html" class="btn-primary btn-white">Abrir Conta Grátis</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <img src="assets/logo-dark.png" alt="InnovaBank" class="footer-logo">
+                <p>O banco feito para quem cria o futuro.</p>
+                
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail">
+                    <button type="button"><i class="ph ph-arrow-right"></i></button>
+                </form>
+            </div>
+
+            <div class="footer-col">
+                <h4>Innova</h4>
+                <ul>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Imprensa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Produto</h4>
+                <ul>
+                    <li><a href="#">Conta Global</a></li>
+                    <li><a href="#">Cartão Black</a></li>
+                    <li><a href="#">Cripto</a></li>
+                    <li><a href="#">Para Empresas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Transparência</h4>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Taxas e Tarifas</a></li>
+                    <li><a href="#">Segurança</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 InnovaBank Tecnologia Financeira S.A. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

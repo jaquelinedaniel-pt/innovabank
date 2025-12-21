@@ -1,0 +1,720 @@
+/* =========================================
+   1. SETUP, VARIÁVEIS E RESET
+   ========================================= */
+:root {
+    --color-primary: #8257E5;
+    --color-secondary: #04D361;
+    --bg-dark: #121214;
+    --text-color: #E1E1E6;
+    --font-primary: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+}
+
+/* =========================================
+   2. HEADER & NAVEGAÇÃO
+   ========================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; 
+    width: 100%;
+    max-width: 90%; 
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+header a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s, transform 0.2s;
+}
+
+header a:hover {
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+header .logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* =========================================
+   3. COMPONENTES GERAIS (BOTÕES, ETC)
+   ========================================= */
+.btn-primary {
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: #FFF;
+    padding: 12px 32px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(4, 211, 97, 0.3);
+    background-size: 200% auto; 
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(130, 87, 229, 0.4);
+}
+
+/* =========================================
+   4. HERO SECTION
+   ========================================= */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    position: relative;
+    width: 100%;    
+    max-width: 90%; 
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.hero-bg-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(130, 87, 229, 0.2) 0%, rgba(0,0,0,0) 70%);
+    top: -100px;
+    left: -100px;
+    z-index: -1;
+    filter: blur(60px);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    
+    /* Efeito Shimmer no Texto */
+    background: linear-gradient(to right, #999 0%, #fff 50%, #999 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #A8A8B3;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.hero-img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px -10px rgba(4, 211, 97, 0.2);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    filter: drop-shadow(0 0 10px rgba(130, 87, 229, 0.3));
+}
+
+/* =========================================
+   5. MARQUEE INFINITO
+   ========================================= */
+.tech-marquee {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    padding: 12px 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 5;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-content span {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #FFF;
+    text-transform: uppercase;
+    margin: 0 30px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.dot { color: #FFF; }
+
+/* =========================================
+   6. SIMULADOR (CALCULADORA)
+   ========================================= */
+.simulator-section {
+    padding: 100px 20px;
+    background: #09090A;
+    display: flex;
+    justify-content: center;
+}
+
+.simulator-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.simulator-text { flex: 1; }
+
+.simulator-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.text-highlight { color: var(--color-secondary); }
+
+.calculator-card {
+    flex: 1;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 24px;
+    position: relative;
+    z-index: 1;
+    background-color: #202024; 
+    border: 2px solid transparent; 
+    background-clip: padding-box; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.calculator-card::before {
+    content: '';
+    position: absolute;
+    top: -2px; bottom: -2px; left: -2px; right: -2px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    z-index: -1;
+    border-radius: 26px;
+}
+
+.input-group label {
+    color: #A8A8B3;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-wrapper {
+    background-color: #121214; 
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper:focus-within {
+    border-color: var(--color-secondary); 
+    box-shadow: 0 0 15px rgba(4, 211, 97, 0.2);
+}
+
+.currency-symbol {
+    color: #737380;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.input-wrapper input {
+    background: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 100%;
+    outline: none;
+}
+
+.results-grid {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.bank-row {
+    background: rgba(255, 99, 71, 0.1); 
+    color: #ff8b7d;
+    border: 1px solid rgba(255, 99, 71, 0.2);
+}
+
+.innova-row {
+    background: rgba(4, 211, 97, 0.1);
+    color: var(--color-secondary);
+    border: 1px solid rgba(4, 211, 97, 0.3);
+    font-weight: bold;
+}
+
+.savings-alert {
+    margin-top: 30px;
+    text-align: center;
+    color: #E1E1E6;
+}
+
+.savings-alert span {
+    display: block;
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--color-secondary), #FFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 5px;
+    text-shadow: 0 0 30px rgba(4, 211, 97, 0.2);
+}
+
+.disclaimer {
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: #505059;
+    text-align: center;
+}
+
+/* =========================================
+   7. SEÇÃO FEATURES (FUNCIONALIDADES)
+   ========================================= */
+.features-section {
+    width: 100%;
+    max-width: 100%; 
+    background-color: #202024; 
+    padding: 100px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--text-color);
+}
+
+.features-section h2 span { color: var(--color-secondary); }
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    background: #29292E;
+    padding: 40px 30px;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #29292E, #29292E);
+    transition: background 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px -10px rgba(130, 87, 229, 0.3);
+}
+
+.feature-card:hover::before {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: #505059;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.feature-card:hover .card-icon {
+    color: var(--color-secondary);
+    text-shadow: 0 0 10px var(--color-secondary);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.feature-card p {
+    color: #A8A8B3;
+    line-height: 1.6;
+}
+
+/* =========================================
+   8. ECOSSISTEMA & CARTÃO 3D
+   ========================================= */
+.ecosystem-section {
+    background-color: #09090A;
+    padding: 150px 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ecosystem-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ecosystem-text { flex: 1; z-index: 2; }
+
+.ecosystem-text h2 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.glitch-text {
+    color: var(--color-secondary);
+    text-shadow: 2px 2px 0px var(--color-primary);
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.tech-list { list-style: none; margin-top: 30px; }
+.tech-list li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #E1E1E6;
+}
+.tech-list i { color: var(--color-secondary); }
+
+.ecosystem-visuals {
+    flex: 1;
+    position: relative;
+    height: 750px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-floater {
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: floatOnly 6s ease-in-out infinite;
+}
+
+.hero-card {
+    width: 100%;
+    max-width: 900px; 
+    height: auto;
+    transform: rotate(15deg);
+    mask-image: radial-gradient(circle, black 55%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle, black 55%, transparent 80%);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ecosystem-visuals:hover .hero-card {
+    transform: rotate(0deg) scale(1.05);
+    mask-image: radial-gradient(circle, black 65%, transparent 90%);
+    -webkit-mask-image: radial-gradient(circle, black 65%, transparent 90%);
+}
+
+.card-spotlight {
+    position: absolute;
+    width: 600px; 
+    height: 600px;
+    background: radial-gradient(circle, rgba(4, 211, 97, 0.25) 0%, rgba(0,0,0,0) 70%);
+    filter: blur(60px);
+    z-index: 1;
+    animation: pulseGlow 4s infinite alternate;
+}
+
+/* =========================================
+   9. CTA & FOOTER
+   ========================================= */
+.cta-section {
+    width: 100%;
+    padding: 120px 20px;
+    background: transparent; 
+    border-top: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(130, 87, 229, 0.15) 0%, transparent 60%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    color: #FFF;
+}
+
+.cta-content p {
+    color: #A8A8B3;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+.btn-white {
+    background: transparent;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    padding: 15px 45px;
+    font-size: 1.1rem;
+    box-shadow: 0 0 15px rgba(4, 211, 97, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-white:hover {
+    background: var(--color-secondary);
+    color: #000;
+    box-shadow: 0 0 30px rgba(4, 211, 97, 0.4);
+}
+
+footer {
+    background: transparent;
+    padding: 80px 20px 40px 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr; 
+    gap: 60px;
+    align-items: start; 
+    margin-bottom: 80px;
+}
+
+.footer-col h4 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 25px; 
+    line-height: 1.2; 
+    margin-top: 10px;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 15px; }
+.footer-col ul li a { color: #737380; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--color-secondary); }
+
+.brand-col p { color: #A8A8B3; margin-bottom: 20px; font-size: 0.9rem; line-height: 1.6; margin-top: 0; }
+
+.newsletter-form {
+    display: flex;
+    background: rgba(255,255,255,0.03);
+    border-radius: 6px;
+    padding: 4px;
+    border: 1px solid rgba(255,255,255,0.1);
+    max-width: 100%;
+}
+
+.newsletter-form input {
+    background: transparent;
+    border: none;
+    padding: 12px;
+    color: #FFF;
+    flex: 1;
+    outline: none;
+}
+
+.newsletter-form button {
+    background: var(--color-primary);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.newsletter-form button:hover { background: var(--color-secondary); color: #000; }
+.footer-logo {
+    height: 50px; 
+    width: auto;
+    display: block;
+    margin-bottom: 25px; 
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p { color: #737380; font-size: 0.85rem; }
+.social-links { display: flex; gap: 20px; }
+.social-links a { color: #A8A8B3; font-size: 1.5rem; transition: color 0.2s; }
+.social-links a:hover { color: var(--color-secondary); }
+
+/* =========================================
+   10. ANIMAÇÕES (KEYFRAMES)
+   ========================================= */
+@keyframes shine { to { background-position: 200% center; } }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes floatOnly { 0% { transform: translateY(0px); } 50% { transform: translateY(-30px); } 100% { transform: translateY(0px); } }
+@keyframes pulseGlow { 0% { opacity: 0.5; transform: scale(0.8); } 100% { opacity: 1; transform: scale(1.2); } }
+
+/* =========================================
+   11. RESPONSIVIDADE (MOBILE < 900px)
+   ========================================= */
+@media (max-width: 900px) {
+    /* Header e Nav */
+    header { padding: 15px 20px; }
+    header nav ul { display: none; }
+    header .btn-primary { padding: 10px 20px; font-size: 0.9rem; }
+
+    /* Hero Section (Reset do Grid para Flex) */
+    .hero {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 120px 20px 60px 20px;
+    }
+
+    .hero-content { width: 100%; max-width: 100%; margin: 0; padding: 0; }
+    .hero-content h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 20px; width: 100%; }
+    .hero-subtitle { font-size: 1rem; color: #A8A8B3; width: 100%; max-width: 100%; margin-bottom: 40px; }
+
+    .hero-bg-glow { top: 20%; left: 50%; transform: translateX(-50%); width: 300px; height: 300px; opacity: 0.5; }
+    .hero-img { display: none; }
+
+    /* Reset geral de Grids para Coluna */
+    .simulator-container, 
+    .features-grid,
+    .ecosystem-visuals {
+        display: flex; 
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        gap: 40px;
+    }
+
+    /* Cartão 3D e Visuais no Mobile */
+    .ecosystem-visuals { margin-top: 50px; height: 300px; }
+    .hero-card { max-width: 80%; transform: rotate(5deg); }
+
+    /* Calculadora */
+    .calculator-card { max-width: 100%; padding: 25px; }
+    .input-wrapper input { font-size: 1.4rem; }
+    .savings-alert span { font-size: 2rem; }
+
+    /* Footer Mobile */
+    .footer-container {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        text-align: center; 
+        gap: 50px; 
+        width: 100%;
+    }
+    .footer-col { width: 100%; display: flex; flex-direction: column; align-items: center; }
+    .footer-logo { margin: 0 auto 25px auto; }
+    .newsletter-form { width: 100%; max-width: 400px; margin: 0 auto; }
+    .footer-col h4 { width: 100%; text-align: center; margin-top: 0; }
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; padding-bottom: 20px; }
+}
