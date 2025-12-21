@@ -61,13 +61,13 @@ O projeto foi desenvolvido sem frameworks pesados para garantir performance máx
 ### 🖥️ Hero Section & Identidade Visual
 *Visual impactante com tipografia brilhante e elementos flutuantes.*
 <div align="center">
-  <img src="assets/image_d02765.png" alt="Hero Section Desktop" width="800px">
+  <img src="assets/hero.png" alt="Hero Section Desktop" width="800px">
 </div>
 
 ### 🧮 O Diferencial: Simulador Interativo
 *Calculadora programada em JS que converte Dólar para Real em tempo real, mostrando a economia.*
 <div align="center">
-  <img src="assets/Captura de ecrã 2025-12-21 194520.jpg" alt="Calculadora de Economia" width="600px">
+  <img src="assets/calculator.png" alt="Calculadora de Economia" width="600px">
 </div>
 
 ### 💳 Ecossistema e Cartões 3D
