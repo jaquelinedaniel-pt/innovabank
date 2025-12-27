@@ -17,24 +17,19 @@
 
 ---
 
-## 💡 Sobre o Projeto
+## 💡 Visão Estratégica
 
-O **InnovaBank** é uma Landing Page de alta conversão desenvolvida para uma Fintech fictícia. O objetivo do projeto foi criar uma experiência de usuário **moderna, fluida e interativa**, fugindo do padrão institucional e focando na identidade visual "Cyberpunk/Tech" que atrai o público de desenvolvedores e nômades digitais.
-
-Diferente de sites estáticos comuns, este projeto implementa lógica de negócios real no Front-end, permitindo que o usuário interaja com a plataforma para simular economias reais.
+O **InnovaBank** não é apenas uma Landing Page; é um ativo de aquisição de clientes. O projeto foi desenhado para uma Fintech com o objetivo de reduzir o CAC (Custo de Aquisição de Cliente) através de uma experiência de usuário imersiva e de alta confiança. Diferente de sites institucionais estáticos, este projeto implementa lógica de negócios no Front-end (Simuladores de Economia), permitindo que o lead perceba valor imediato antes mesmo de abrir a conta.
 
 ---
 
-## ⚡ Features e Diferenciais
+## ⚡ Features Orientadas a Conversão
 
 O projeto foi construído com foco em **UI Design Avançado** e **Engenharia de Software**:
 
-* **🧮 Calculadora de Economia (Real-time):** Lógica em JavaScript que captura o input do usuário e calcula instantaneamente a diferença de taxas (Spread) entre bancos tradicionais e o InnovaBank, formatando para moeda local (BRL) automaticamente.
-* **📱 Responsividade Extrema:** O layout se adapta perfeitamente a qualquer dispositivo. No mobile, a interface muda drasticamente (menu oculto, grid vira flex column) para priorizar a conversão (Mobile First).
-* **🎨 UI Design Moderno:**
-    * **Glassmorphism:** Efeito de vidro fosco nos cartões.
-    * **Neon Glow:** Bordas com gradientes animados e sombras coloridas.
-    * **Dark Mode Nativo:** Paleta de cores escura (`#121214`) para conforto visual e estética premium.
+* **🧮 Calculadora de Economia (Ferramenta de Venda):** Lógica JavaScript que tangibiliza a proposta de valor, convertendo taxas abstratas em "dinheiro economizado" real para o usuário..
+* **📱 Mobile-First Strategy:** Arquitetura responsiva que prioriza a experiência vertical, dado que 80% do tráfego bancário ocorre via smartphone.
+* **🎨 UI/UX Design System:** Implementação de Glassmorphism e Neon Glow não apenas por estética, mas para criar uma identidade visual de "Futuro/Tech" que gera autoridade imediata no nicho de desenvolvedores.
 * **✨ Micro-interações e Animações:**
     * **Marquee Infinito:** Faixa de texto em loop contínuo feito puramente com CSS Keyframes.
     * **3D Hover Effects:** Cartões que flutuam, giram e acendem ao passar o mouse.
@@ -100,14 +95,19 @@ Este é um projeto estático, então você não precisa instalar dependências (
     * *Dica: Se usar VS Code, instale a extensão "Live Server" para ver as alterações em tempo real.*
 
 ---
+## 👩‍💻 Sobre a Product Owner
 
-<div align="center">
-  <p>Desenvolvido com 💜 e muita lógica por <strong>Jaqueline Daniel</strong></p>
+<div>
+  <h3>Jaqueline Daniel</h3>
+  <p><strong>Product Owner | Business Analyst & Strategist</strong></p>
+  <p>15 anos de experiência transformando complexidade operacional em produtos digitais de alto valor.</p>
   
-  <a href="https://www.linkedin.com/in/jaquelinedaniel-pt" target="_blank">
-    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank">
-  </a> 
-  <a href="mailto:jaquelinedaniel.pt@GMAIL.COM">
-    <img src="https://img.shields.io/badge/-Email-%23D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank">
-  </a>
+  <p>
+    <a href="https://www.linkedin.com/in/jaquelinedaniel-pt" target="_blank">
+      <img src="https://img.shields.io/badge/-Conectar_no_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank">
+    </a> 
+    <a href="https://jaquelinedaniel.pt" target="_blank">
+      <img src="https://img.shields.io/badge/-Ver_Portfolio_Executivo-0f172a?style=for-the-badge&logo=react&logoColor=FFD700" target="_blank">
+    </a>
+  </p>
 </div>
