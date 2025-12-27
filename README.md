@@ -1,7 +1,7 @@
-# 🚀 InnovaBank - Landing Page Financeira
+# InnovaBank - Landing Page Financeira
 
 <div align="center">
-  <img src="assets/app-ib.png" alt="InnovaBank Hero" width="100%">
+  <img width="1080" height="1215" alt="innobank-mockup" src="https://github.com/user-attachments/assets/9f909b7d-89a1-4476-84fa-508289e01dd2"/>
   <br>
   <h3>O banco digital feito para freelancers, PJ e nômades digitais.</h3>
   <br>
