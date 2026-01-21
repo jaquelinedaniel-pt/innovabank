@@ -95,7 +95,7 @@ Este é um projeto estático, então você não precisa instalar dependências (
     * *Dica: Se usar VS Code, instale a extensão "Live Server" para ver as alterações em tempo real.*
 
 ---
-## 👩‍💻 Sobre a Product Owner
+## 👩‍💻 Sobre a Analista Funcional
 
 <div>
   <h3>Jaqueline Daniel</h3>
