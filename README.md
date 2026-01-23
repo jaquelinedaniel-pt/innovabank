@@ -99,7 +99,7 @@ Este é um projeto estático, então você não precisa instalar dependências (
 
 <div>
   <h3>Jaqueline Daniel</h3>
-  <p><strong>Product Owner | Business Analyst & Strategist</strong></p>
+  <p><strong>Functional Analyst | Business Analyst & Strategist</strong></p>
   <p>15 anos de experiência transformando complexidade operacional em produtos digitais de alto valor.</p>
   
   <p>
